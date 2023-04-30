@@ -6,9 +6,6 @@ import {
   useBreakpointValue,
   Stack,
   Heading,
-  Button,
-  Text,
-  Center,
   Container,
 } from "@chakra-ui/react";
 // Here we have used react-icons package for the icons
@@ -44,7 +41,7 @@ export default function Banner() {
       overflow={"hidden"}
     >
       {/* CSS files for react-slick */}
-      <link
+      {/* <link
         rel="stylesheet"
         type="text/css"
         charSet="UTF-8"
@@ -54,7 +51,7 @@ export default function Banner() {
         rel="stylesheet"
         type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-      />
+      /> */}
       {/* Left Icon */}
       <IconButton
         aria-label="left-arrow"
@@ -104,24 +101,8 @@ export default function Banner() {
                 top="15%"
                 transform="translate(0, -50%)"
               >
-                <Heading
-                  //   maxW={"4xl"}
-                  fontSize={{ base: "3xl", md: "4xl", lg: "7xl" }}
-                  //   w={{ base: "1000", md: "1000", lg: "1000" }}
-                >
-                  {/* All Apple Originals */}
-                </Heading>
-                {/* <Text fontSize={{ base: "md", lg: "lg" }} color="black">
-                  Exclusively on Apple TV+. Watch here and on the Apple TV app
-                  across your devices.
-                </Text>
-                <Button
-                  size={{ base: "md", lg: "lg" }}
-                  width={{ base: "sx", lg: "md" }}
-                  color="black"
-                >
-                  Start Free Trial
-                </Button> */}
+                
+                
               </Stack>
             </Container>
           </Box>

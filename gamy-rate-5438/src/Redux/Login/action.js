@@ -5,9 +5,7 @@ export const registeractions = {
     ADD_TOKEN_SUCCESS: "ADD_TOKEN_SUCCESS",
     ADD_TOKEN_FAILURE: "ADD_TOKEN_FAILURE",
     LOGOUT: "LOGOUT"
-    // REMOVE_TOKEN_REQUEST: "REMOVE_TOKEN_REQUEST",
-    // REMOVE_TOKEN_SUCCESS: "REMOVE_TOKEN_SUCCESS",
-    // REMOVE_TOKEN_FAILURE: "REMOVE_TOKEN_FAILURE",
+    
 }
 
 
@@ -31,20 +29,32 @@ export const addtokenerr = () => {
     };
 }
 
-export const logout = () => (
-    { type: "LOGOUT" }
-);
+// export const logout = () => (
+//     localStorage.removeItem('tvappletoken');
+//     { type: "LOGOUT" }
+    
+
+// );
+
+export const logout = () => {
+    localStorage.removeItem('tvappletoken');
+return{ type: "LOGOUT" }  
+}
+   
+
+
 
 
 export const getusertoken = ({ userlogin, onClose }) => (dispatch) => {
 
     dispatch(addtokenreq());
     console.log(userlogin)
-    return axios.post('https://ghost-auth-service.herokuapp.com/login', userlogin)
+    return axios.post('https://reqres.in/api/users', userlogin)
         .then((res) => {
             alert("Logged In Successful")
-            localStorage.setItem('tvappletoken', JSON.stringify(res.data.token));
-            dispatch(addtokenres(res.data.token))
+            console.log(res.data,"signin")
+            localStorage.setItem('tvappletoken', JSON.stringify(res.data.password));
+            dispatch(addtokenres(res.data.password))
             // if (res.data.error == false) {
             //     onClose()
             // }

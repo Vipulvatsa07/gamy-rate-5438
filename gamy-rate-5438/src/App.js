@@ -13,5 +13,5 @@ function App() {
     </div>
   );
 }
-//https://github.com/vadimghedreutan/Apple-tv-plus-clone/tree/main/src
+
 export default App;
