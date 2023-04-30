@@ -1,5 +1,8 @@
 # AppleTv Clone
 
+Important: "You can use the email address eve.holt@reqres.in and any password to log in using the Reqres service."
+
+
 ## About
 
 Apple TV+ is an American subscription streaming service owned and operated by Apple Inc. Launched on November 1, 2019, it offers a selection of original production film and television series called Apple Originals.
